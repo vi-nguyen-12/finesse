@@ -47,7 +47,6 @@ const slideImages = [
 ];
 const ProductSlider = ({ images }) => {
   const windowSize = useWindowSize();
-  console.log(`${"." + windowSize + "-slide-container"}`);
   return (
     <div className={`slide-container ${windowSize + "-slide-container"}`}>
       <Swiper
