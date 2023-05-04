@@ -17,10 +17,14 @@ const ProductDetail = () => {
   useEffect(() => {
     const getProduct = async () => {
       try {
-        const res = await axios.get(`${API_URL}/api/products/${productId}`);
+        const res = await axios.get(`${API_URL}/api/products/${productId}`, {
+          headers: { "Content-Type": "application/json" },
+        });
         setProduct(res.data);
       } catch (error) {
+        alert(error.message);
         console.log(error);
+        return;
       } finally {
         setIsLoading(false);
       }

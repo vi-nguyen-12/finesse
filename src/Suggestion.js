@@ -14,10 +14,14 @@ const Suggestion = () => {
   useEffect(() => {
     const getProducts = async () => {
       try {
-        const res = await axios.get(`${API_URL}/api/products`);
+        const res = await axios.get(`${API_URL}/api/products`, {
+          headers: { "Content-Type": "application/json" },
+        });
         setProducts(res.data);
       } catch (err) {
-        console.log(err);
+        alert(error.message);
+        console.log(error);
+        return;
       } finally {
         setIsLoading(false);
       }
