@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Navbar from "./Navbar";
+import ProductDetail from "./ProductDetail";
+import Banner from "./Banner";
+import Suggestion from "./Suggestion";
+import Footer from "./Footer";
+import { useWindowSize } from "./helper";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
+  const windowSize = useWindowSize();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div
+        className={`App ${
+          windowSize === "lg" || (windowSize === "xl" && "p-6")
+        }`}
+      >
+        <Navbar />
+        <ProductDetail />
+        <Banner />
+        <Suggestion />
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 

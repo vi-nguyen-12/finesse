@@ -1,0 +1,30 @@
+.btn-quantity-container button {
+  width: 33.33%;
+  padding: 10px;
+  background-color: transparent;
+  border: 1px solid #000;
+  font-weight: 600;
+}
+
+.btn-quantity-container .left-btn {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-right: none;
+}
+
+.btn-quantity-container .right-btn {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-left: none;
+}
+
+.collapse-item {
+  padding: 1.5rem;
+  border-top: 1px solid #dee2e6;
+  margin-top: 1rem;
+}
+
+.collapse-item p {
+  text-align: left;
+  font-weight: 500;
+}
