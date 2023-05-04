@@ -18,7 +18,7 @@ const Suggestion = () => {
           headers: { "Content-Type": "application/json" },
         });
         setProducts(res.data);
-      } catch (err) {
+      } catch (error) {
         alert(error.message);
         console.log(error);
         return;
