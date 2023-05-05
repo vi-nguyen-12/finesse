@@ -8,7 +8,10 @@ import "./Navbar.css";
 const Navbar = () => {
   const windowSize = useWindowSize();
   return (
-    <div className="navbar-container d-flex align-items-center justify-content-between p-5">
+    <div
+      className="navbar-container d-flex align-items-center justify-content-between p-5"
+      style={windowSize === "sm" ? { height: "100px" } : { height: "150px" }}
+    >
       <div className="d-flex">
         <GoThreeBars
           className="d-block me-5"
