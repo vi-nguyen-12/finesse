@@ -35,7 +35,7 @@ const ProductDetail = () => {
     return <div className="text-center">Loading...</div>;
   }
   return (
-    <div className="d-flex flex-sm-column flex-md-row">
+    <div className="d-flex flex-column flex-md-row">
       <ProductSlider images={product.images} />
       <ProductDescription product={product} />
     </div>
