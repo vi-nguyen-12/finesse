@@ -104,7 +104,7 @@ const ProductDetail = ({ product }) => {
   };
 
   return (
-    <div className="px-6 mt-5 m-md-5 w-100 w-lg-75">
+    <div className="px-6 mt-5 m-lg-5 w-100 w-lg-75">
       <div className="d-flex justify-content-between">
         <p className="fw-600 fs-20">{product.name}</p>
         <p className="fw-600 fs-18 secondary-color">${product.price}</p>

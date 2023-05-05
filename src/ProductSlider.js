@@ -48,7 +48,9 @@ const slideImages = [
 const ProductSlider = ({ images }) => {
   const windowSize = useWindowSize();
   return (
-    <div className={`slide-container ${windowSize + "-slide-container"}`}>
+    <div
+      className={`slide-container ${windowSize > 992 && "lg-slide-container"}`}
+    >
       <Swiper
         freeMode={true}
         centeredSlides={true}

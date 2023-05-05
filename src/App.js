@@ -12,11 +12,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div
-        className={`App ${
-          windowSize === "lg" || (windowSize === "xl" && "p-6")
-        }`}
-      >
+      <div className={`App ${windowSize > 1200 && "p-6"}`}>
         <Navbar />
         <ProductDetail />
         <Banner />

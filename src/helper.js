@@ -9,8 +9,5 @@ export const useWindowSize = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-  if (windowSize >= 1200) return "xl";
-  if (windowSize >= 992) return "lg";
-  if (windowSize >= 768) return "md";
-  return "sm";
+  return windowSize;
 };
